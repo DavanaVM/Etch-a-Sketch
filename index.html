@@ -7,21 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            width: 100%;
+            background-color: lightblue;
+        }
+        html{
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         #main {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            flex: 1 1 100%;
+            justify-content: center;
         }
 
         .sdiv {
-            border: solid black 1px;
-            width:32px;
-            height:32px;
+            width: 16px;
+            height: 16px;
+            background-color: white;
         }
 
-        .break{
-            height:0;
-            flex-basis:100%;
+        .break {
+            height: 0;
+            flex-basis: 100%;
         }
 
         .black {
@@ -31,8 +47,13 @@
 </head>
 
 <body>
+    <div class="container">
     <div class="main" id="main"></div>
+    <button id="resize">resize</button>
+    <input id="colors" type="color">
+    <button id="clear">clear</button>
     <script src="main.js"></script>
+</div>
 </body>
 
 </html>

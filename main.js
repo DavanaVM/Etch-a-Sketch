@@ -13,8 +13,8 @@ reset.addEventListener('click', () =>{
 
 const resize = document.querySelector("#resize")
 resize.addEventListener("click", () =>{
-    sizemult = prompt("enter cubes per row (max 40)")
-    if(isNaN(size) || sizemult > 40){
+    sizemult = prompt("enter cubes per row (max 100)")
+    if(isNaN(size) || sizemult > 100 || sizemult <= 0){
         size = 256
         sizemult = 16
     }else{
@@ -68,6 +68,4 @@ document.addEventListener("mouseover", (e) => {
         e.target.setAttribute("style", `background-color:${colors.value}`)
     }
 })
-
-
 

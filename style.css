@@ -1,0 +1,52 @@
+body{
+    background-color: lightblue;
+}
+html{
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    width: 600px;
+    justify-content: center;
+    
+    
+}
+
+.sdiv {
+    aspect-ratio: 1/1;
+    flex: 1 0 auto;
+    min-height:1px;
+    min-width:1px;
+    background-color: white;
+}
+
+.break {
+    height: 0;
+    flex-basis: 100%;
+}
+
+.black {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 600px)
+{
+    #main{
+        width: 300px;
+        height: 300px;
+    }
+}

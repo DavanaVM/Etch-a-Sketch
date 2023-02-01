@@ -6,57 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color: lightblue;
-        }
-        html{
-            width: 100%;
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    <link rel="stylesheet" href="style.css">
+      
 
-        #main {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            height: 600px;
-            width: 600px;
-            justify-content: center;
-            
-            
-        }
-
-        .sdiv {
-            aspect-ratio: 1/1;
-            flex: 1 0 auto;
-            min-height:1px;
-            min-width:1px;
-            background-color: white;
-        }
-
-        .break {
-            height: 0;
-            flex-basis: 100%;
-        }
-
-        .black {
-            background-color: black;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
     <div class="main" id="main"></div>
     <div class="break"></div>
-    <button id="resize">resize</button>
-    <input id="colors" type="color">
     <button id="clear">clear</button>
+    <input id="colors" type="color">
+    <div class="black">
+    <input type="range" min="1" max="100" value="50" class="slider" id="range" oninput="this.nextElementSibling.nextElementSibling.value = this.value">
+    <div class="break"></div>
+    <output>50</output>
+    </div>
     <script src="main.js"></script>
 </div>
 </body>
